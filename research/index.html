@@ -19,11 +19,291 @@
     </nav>
   </header>
 
-  <main>
-    <h1>Research</h1>
-    <p>
-      여기에는 주요 연구 방향, 키워드, 테마를 bullet 형태로 정리.
-    </p>
+  <main class="research-page">
+
+    <!-- HERO -->
+    <section class="research-hero">
+      <div class="research-hero-inner">
+        <h1>Research</h1>
+        <p class="research-lead">
+          We develop translational neurophotonic technologies spanning
+          <strong>neurobiological imaging</strong>, <strong>neurobiology</strong>, and
+          <strong>AI-driven analysis</strong>.
+        </p>
+
+        <div class="research-highlights">
+          <div class="hl">
+            <div class="hl-k">Focus</div>
+            <div class="hl-v">Neurovascular diseases · Neuropathic pain</div>
+          </div>
+          <div class="hl">
+            <div class="hl-k">Platforms</div>
+            <div class="hl-v">In-vivo optical imaging · Neuromodulation</div>
+          </div>
+          <div class="hl">
+            <div class="hl-k">AI</div>
+            <div class="hl-v">Restoration · Segmentation · Signal modeling</div>
+          </div>
+        </div>
+
+        <div class="research-tags">
+          <span class="tag">Two-photon</span>
+          <span class="tag">Confocal</span>
+          <span class="tag">Light-sheet</span>
+          <span class="tag">Neuromodulation</span>
+          <span class="tag">Calcium/Voltage imaging</span>
+          <span class="tag">HD-MEA</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABS -->
+    <section class="research-tabs" aria-label="Research categories">
+      <button class="tab active" data-tab="imaging" type="button">Neurophotonics</button>
+      <button class="tab" data-tab="neuro" type="button">Translational medicine</button>
+      <button class="tab" data-tab="ai" type="button">AI+X</button>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="research-content">
+
+      <!-- Neurobiological Imaging -->
+      <div class="tab-panel active" id="tab-imaging" data-panel="imaging">
+        <div class="card-grid one-col">
+
+          <article class="r-card">
+            <div class="r-card-media">
+              <img src="../assets/img/research/imaging-optical.jpg" alt="Optical imaging systems"
+                   onerror="this.onerror=null;this.src='../assets/img/research/placeholder.jpg';" />
+            </div>
+            <div class="r-card-body">
+              <div class="r-card-head">
+                <h2>Optical Imaging Systems</h2>
+                <div class="chips">
+                  <span class="chip">In-vivo</span>
+                  <span class="chip">Microscopy</span>
+                </div>
+              </div>
+              <ul class="r-list">
+                <li>Two-photon imaging for live capillary blood flow and neurovascular dynamics</li>
+                <li>Confocal imaging for tissue-level structural and vascular examination</li>
+                <li>Light-sheet platforms for high-speed, large-area imaging</li>
+              </ul>
+              <div class="r-foot">
+                <a class="r-link" href="../project/">See related projects →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="r-card">
+            <div class="r-card-media">
+              <img src="../assets/img/research/imaging-neuromodulation.jpg" alt="Neuromodulation and stimulation"
+                   onerror="this.onerror=null;this.src='../assets/img/research/placeholder.jpg';" />
+            </div>
+            <div class="r-card-body">
+              <div class="r-card-head">
+                <h2>Neuromodulation &amp; Stimulation</h2>
+                <div class="chips">
+                  <span class="chip">Stimulation</span>
+                  <span class="chip">Closed-loop</span>
+                </div>
+              </div>
+              <ul class="r-list">
+                <li>Optical neuromodulation integrated with functional imaging readouts</li>
+                <li>System-level design for stable stimulation + measurement pipelines</li>
+                <li>Translational protocols targeting clinically relevant endpoints</li>
+              </ul>
+              <div class="r-foot">
+                <a class="r-link" href="../project/">See related projects →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="r-card">
+            <div class="r-card-media">
+              <img src="../assets/img/research/imaging-platforms.jpg" alt="Translational platforms"
+                   onerror="this.onerror=null;this.src='../assets/img/research/placeholder.jpg';" />
+            </div>
+            <div class="r-card-body">
+              <div class="r-card-head">
+                <h2>Translational Neurophotonic Platforms</h2>
+                <div class="chips">
+                  <span class="chip">Translation</span>
+                  <span class="chip">Clinical need</span>
+                </div>
+              </div>
+              <ul class="r-list">
+                <li>End-to-end experimental pipelines from imaging system to quantitative analysis</li>
+                <li>Reusable protocols enabling cross-study comparability</li>
+                <li>Focus on neurovascular disorders and neuropathic pain</li>
+              </ul>
+              <div class="r-foot">
+                <a class="r-link" href="../project/">See related projects →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Neurobiology -->
+      <div class="tab-panel" id="tab-neuro" data-panel="neuro">
+        <div class="card-grid one-col">
+
+          <article class="r-card">
+            <div class="r-card-media">
+              <img src="../assets/img/research/neuropathicpain.png" alt="Neuropathic pain (DRG and peripheral sensory circuits)"
+                  onerror="this.onerror=null;this.src='../assets/img/research/placeholder.jpg';" />
+            </div>
+
+            <div class="r-card-body">
+              <div class="r-card-head">
+                <h2>Neuropathic Pain</h2>
+                <div class="chips">
+                  <span class="chip">DRG</span>
+                  <span class="chip">Neuroimmune</span>
+                  <span class="chip">Translation</span>
+                </div>
+              </div>
+
+              <p class="r-paragraph">
+                Our pain research focuses on how peripheral sensory systems are organized and how nerve injury remodels these
+                circuits to drive neuropathic pain. We focus on the dorsal root ganglion (DRG) as a key site where neurons,
+                glia, immune cells, and vasculature interact to shape sensory transduction and transmission. Using mouse models
+                of acute and chronic pain, we combine molecular, cellular, and behavioral approaches to identify pathway- and
+                modality-specific mechanisms and to inform more precise therapeutic strategies for neuropathic pain.
+              </p>
+
+            </div>
+          </article>
+
+          <article class="r-card">
+            <div class="r-card-media">
+              <img src="../assets/img/research/electrophysiology.png"
+                  alt="AI-based neuro electrophysiology platform"
+                  onerror="this.onerror=null;this.src='../assets/img/research/placeholder.jpg';" />
+            </div>
+
+            <div class="r-card-body">
+              <div class="r-card-head">
+                <h2>AI-based Neuro Electrophysiology Platform</h2>
+                <div class="chips">
+                  <span class="chip">HD-MEA</span>
+                  <span class="chip">CSD</span>
+                  <span class="chip">AI analytics</span>
+                </div>
+              </div>
+
+              <p class="r-paragraph">
+                We develop an AI-driven electrophysiology platform that integrates high-density microelectrode array (HD-MEA)
+                recordings with advanced signal processing and machine learning to quantify neural population dynamics, map
+                network reorganization, and identify disease-relevant electrophysiological biomarkers.
+              </p>
+
+              <ul class="r-list">
+                <li>Spike/LFP feature extraction and event detection at scale</li>
+                <li>CSD-based spatiotemporal dynamics and propagation analysis</li>
+                <li>Representation learning for phenotype discovery and classification</li>
+              </ul>
+            </div>
+          </article>
+
+
+          <article class="r-card">
+            <div class="r-card-media">
+              <img src="../assets/img/research/neuro-gliopathy.jpg" alt="Gliopathy and pain research"
+                   onerror="this.onerror=null;this.src='../assets/img/research/placeholder.jpg';" />
+            </div>
+            <div class="r-card-body">
+              <div class="r-card-head">
+                <h2>Gliopathy &amp; Pain Research</h2>
+                <div class="chips">
+                  <span class="chip">Gliopathy</span>
+                  <span class="chip">Translation</span>
+                </div>
+              </div>
+              <ul class="r-list">
+                <li>Gliopathic mechanisms underlying pain and neurovascular dysfunction</li>
+                <li>Integration of imaging and modulation for hypothesis testing</li>
+                <li>Center-scale research translation (GPRC)</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- AI -->
+      <div class="tab-panel" id="tab-ai" data-panel="ai">
+        <div class="card-grid one-col">
+
+          <article class="r-card">
+            <div class="r-card-media">
+              <img src="../assets/img/research/ai-restoration.jpg" alt="Microscopy image restoration"
+                   onerror="this.onerror=null;this.src='../assets/img/research/placeholder.jpg';" />
+            </div>
+            <div class="r-card-body">
+              <div class="r-card-head">
+                <h2>Microscopy Image Restoration</h2>
+                <div class="chips">
+                  <span class="chip">Denoising</span>
+                  <span class="chip">Deblurring</span>
+                </div>
+              </div>
+              <ul class="r-list">
+                <li>Fluorescence microscopy enhancement under low-SNR and short exposure</li>
+                <li>Structure-preserving restoration with deep generative models</li>
+                <li>Evaluation via fidelity metrics + downstream task performance</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="r-card">
+            <div class="r-card-media">
+              <img src="../assets/img/research/ai-segmentation.jpg" alt="Segmentation and quantification"
+                   onerror="this.onerror=null;this.src='../assets/img/research/placeholder.jpg';" />
+            </div>
+            <div class="r-card-body">
+              <div class="r-card-head">
+                <h2>Segmentation &amp; Quantification</h2>
+                <div class="chips">
+                  <span class="chip">Cellpose</span>
+                  <span class="chip">U-Net</span>
+                </div>
+              </div>
+              <ul class="r-list">
+                <li>Robust cell/structure segmentation and quantitative readouts</li>
+                <li>Preprocessing and augmentation pipelines for reproducibility</li>
+                <li>Benchmarking across datasets and imaging modalities</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="r-card">
+            <div class="r-card-media">
+              <img src="../assets/img/research/ai-signal.jpg" alt="Neural signal modeling"
+                   onerror="this.onerror=null;this.src='../assets/img/research/placeholder.jpg';" />
+            </div>
+            <div class="r-card-body">
+              <div class="r-card-head">
+                <h2>Neural Signal Modeling</h2>
+                <div class="chips">
+                  <span class="chip">Calcium</span>
+                  <span class="chip">HD-MEA</span>
+                </div>
+              </div>
+              <ul class="r-list">
+                <li>Calcium/voltage imaging dynamics analysis and event quantification</li>
+                <li>HD-MEA/CSD-based network reconstruction and graph-theoretic metrics</li>
+                <li>Representation learning for disease modeling and classification</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </section>
   </main>
 
   <footer>

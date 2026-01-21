@@ -35,9 +35,9 @@ nav a:hover {
 }
 
 main {
-  max-width: 1000px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 40px 20px 60px;
+  padding: 28px 24px;
 }
 
 h1, h2, h3 {
@@ -205,8 +205,8 @@ footer {
 
 /* 카드 안 프로필 사진 크기 고정 */
 .member-card img.member-photo {
-  width: 90px;      /* 여기 값 키우면 조금 더 크게 */
-  height: 115px;
+  width: 200px;      /* 여기 값 키우면 조금 더 크게 */
+  height: 220px;
   object-fit: cover;
   border-radius: 6px;
   flex-shrink: 0;
@@ -223,5 +223,356 @@ footer {
   .member-card img.member-photo {
     width: 110px;
     height: 135px;
+  }
+}
+
+.page-desc{
+  margin-top: 8px;
+  margin-bottom: 18px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.accordion{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.accordion-item{
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0;
+  overflow: hidden;
+}
+
+.accordion-title{
+  list-style: none;              /* 기본 삼각형 제거(브라우저마다 다름) */
+  cursor: pointer;
+  padding: 14px 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 크롬/사파리 기본 마커 제거 */
+.accordion-title::-webkit-details-marker{
+  display: none;
+}
+
+/* 오른쪽 화살표 표시 */
+.accordion-title::after{
+  content: "▾";
+  font-size: 14px;
+  color: #6b7280;
+  transition: transform 0.2s ease;
+}
+
+/* 열렸을 때 화살표 회전 */
+.accordion-item[open] .accordion-title::after{
+  transform: rotate(180deg);
+}
+
+/* =========================
+   Research Page (Accordion)
+   ========================= */
+
+/* =========================
+   Research (Polished UI)
+   ========================= */
+
+.research-page{
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 28px 24px;
+}
+
+/* HERO */
+.research-hero{
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbfd 100%);
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.research-hero-inner{
+  padding: 8px 8px 6px;
+}
+
+.research-hero h1{
+  font-size: 34px;
+  margin: 6px 0 10px;
+  letter-spacing: -0.4px;
+}
+
+.research-lead{
+  margin: 0 0 14px;
+  color: #374151;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.research-highlights{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 10px 0 12px;
+}
+
+.hl{
+  border: 1px solid #eef2f7;
+  border-radius: 14px;
+  background: #fff;
+  padding: 10px 12px;
+}
+
+.hl-k{
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.hl-v{
+  font-size: 13px;
+  color: #111827;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.research-tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tag{
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  color: #374151;
+}
+
+/* TABS */
+.research-tabs{
+  display: flex;
+  gap: 8px;
+  padding: 6px 2px 14px;
+}
+
+.tab{
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 800;
+  font-size: 13px;
+  color: #374151;
+  cursor: pointer;
+}
+
+.tab:hover{
+  background: #f9fafb;
+}
+
+.tab.active{
+  border-color: #111827;
+  color: #111827;
+}
+
+/* PANELS */
+.tab-panel{
+  display: none;
+}
+.tab-panel.active{
+  display: block;
+}
+
+/* CARD GRID */
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.r-card-head{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.r-card h2{
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.35;
+  letter-spacing: -0.2px;
+}
+
+.chips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.chip{
+  font-size: 11px;
+  color: #6b7280;
+  border: 1px solid #eef2f7;
+  background: #fbfbfd;
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-weight: 700;
+}
+
+.r-list{
+  margin: 0;
+  padding-left: 18px;
+  color: #4b5563;
+  line-height: 1.65;
+  font-size: 13px;
+}
+
+.r-list li{
+  margin-bottom: 8px;
+}
+
+.r-foot{
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.r-link{
+  text-decoration: none;
+  color: #111827;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.r-link:hover{
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 980px){
+  .card-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .research-highlights{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px){
+  .card-grid{ grid-template-columns: 1fr; }
+  .research-hero h1{ font-size: 28px; }
+}
+
+/* ===== Research: 1 column ===== */
+.card-grid.one-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+/* ===== Research Card (media + body) ===== */
+.r-card{
+  display: flex;
+  gap: 18px;
+  padding: 18px;
+}
+
+/* left image column */
+.r-card-media{
+  width: 340px;          /* 300~380 추천 */
+  flex: 0 0 340px;
+}
+
+.r-card-media img{
+  width: 100%;
+  height: 210px;         /* 카드들 동일 높이 */
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  border: 1px solid #e5e7eb;
+}
+
+.r-card-body{
+  flex: 1;
+  min-width: 0;
+}
+
+.r-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.r-card h2 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.r-list {
+  margin: 0;
+  padding-left: 18px;
+  color: #334155;
+}
+
+.r-foot {
+  margin-top: 10px;
+}
+
+.r-link {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Tabs */
+.research-tabs {
+  display: flex;
+  gap: 10px;
+  margin: 18px auto 10px;
+  max-width: 1100px;
+  padding: 0 20px;
+}
+
+.research-tabs .tab {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 999px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.research-tabs .tab.active {
+  border-color: #111827;
+  color: #111827;
+}
+
+/* Panels */
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* Mobile */
+@media (max-width: 860px){
+  .r-card{
+    flex-direction: column;
+  }
+  .r-card-media{
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  .r-card-media img{
+    height: 220px;
   }
 }
