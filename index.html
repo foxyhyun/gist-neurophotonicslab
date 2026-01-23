@@ -1,37 +1,96 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>GIST Neurophotonics Lab</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
-    <header>
+  <header>
     <div class="logo">GIST Neurophotonics Lab</div>
     <nav>
-        <a href="./">Home</a>
-        <a href="research/">Research</a>
-        <a href="member/">Member</a>
-        <a href="project/">Project</a>
-        <a href="news/">News</a>
-        <a href="communication/">Communication</a>
+      <a href="./">Home</a>
+      <a href="./research/">Research</a>
+      <a href="./member/">Member</a>
+      <a href="./project/">Project</a>
+      <a href="./news/">News</a>
+      <a href="./communication/">Communication</a>
     </nav>
-    </header>
+  </header>
+
+  <main class="home-page">
+
+    <section class="home-intro">
+      <div class="home-intro-inner">
+        <h1>Welcome to GIST Neurophotonics Lab</h1>
+      </div>
+      </section>
 
 
-  <main>
-    <h1>Welcome to GIST Neurophotonics Lab</h1>
-    <p>
-      여기에 연구실 한 줄 소개 / 짧은 설명을 적으면 돼.
-      예: “우리는 신경과학, 광학, AI를 결합하여 뉴로포토닉스 연구를 수행합니다.”
-    </p>
+    <!-- Group photo slider -->
+    <section class="home-section">
+      <div class="photo-slider" id="photoSlider" aria-label="Lab photo slider">
+        <button class="slider-btn prev" type="button" aria-label="Previous photo">
+          ‹
+        </button>
+
+        <div class="slider-viewport">
+          <img id="sliderImage" class="slider-image" src="" alt="Lab group photo" />
+          <div class="slider-caption" id="sliderCaption"></div>
+        </div>
+
+        <button class="slider-btn next" type="button" aria-label="Next photo">
+          ›
+        </button>
+
+        <div class="slider-dots" id="sliderDots" aria-label="Photo navigation dots"></div>
+      </div>
+    </section>
+
+    <!-- Latest News -->
+    <section class="home-section">
+      <div class="section-head section-head-row">
+        <div>
+          <h2>Latest Lab News</h2>
+          <p class="section-sub">Recent updates, awards, and events.</p>
+        </div>
+        <a class="btn small" href="./news/">View all</a>
+      </div>
+
+      <div class="news-grid">
+        <!-- 카드 1 -->
+        <article class="news-card">
+          <div class="news-meta">2025.11.24</div>
+          <h3 class="news-title">2025 SPIE ABC Conference</h3>
+          <p class="news-desc">Our lab participated in SPIE ABC 2025 and presented recent work.</p>
+          <a class="news-link" href="./news/">Read more →</a>
+        </article>
+
+        <!-- 카드 2 -->
+        <article class="news-card">
+          <div class="news-meta">2025.11.24</div>
+          <h3 class="news-title">Poster Presentation Award</h3>
+          <p class="news-desc">Congratulations on receiving the poster presentation award.</p>
+          <a class="news-link" href="./news/">Read more →</a>
+        </article>
+
+        <!-- 카드 3 -->
+        <article class="news-card">
+          <div class="news-meta">2025.03.20</div>
+          <h3 class="news-title">Workshop Presentation – Akm Ashiquzzaman</h3>
+          <p class="news-desc">Akm presented at a workshop and shared ongoing research progress.</p>
+          <a class="news-link" href="./news/">Read more →</a>
+        </article>
+      </div>
+    </section>
+
   </main>
 
   <footer>
     © 2025 GIST Neurophotonics Lab. All rights reserved.
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
