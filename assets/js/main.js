@@ -98,3 +98,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("DOMContentLoaded", initHomeSlider);
 })();
+
+// ==============================
+// Research modal (image + detail)
+// ==============================
+(function () {
+  const modal = document.getElementById("researchModal");
+  if (!modal) return;
+
+  const modalImg = document.getElementById("modalImg");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDesc = document.getElementById("modalDesc");
+
+  function openModal({ img, title, descHtml }) {
+    modalImg.src = img || "";
+    modalTitle.textContent = title || "";
+    modalDesc.innerHTML = descHtml || "";
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    modalImg.src = "";
+  }
+
+  // close handlers
+  modal.addEventListener("click", (e) => {
+    if (e.target.dataset.close) closeModal();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
+  });
+
+  // attach click to research images (use data-* for content)
+  document.addEventListener("click", (e) => {
+    const el = e.target.closest("[data-modal='research']");
+    if (!el) return;
+
+    openModal({
+      img: el.dataset.img,
+      title: el.dataset.title,
+      descHtml: el.dataset.desc
+    });
+  });
+})();
