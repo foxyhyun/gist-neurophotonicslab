@@ -310,3 +310,373 @@ nav a:hover{
   header{ padding: 12px 18px; }
   .research-top h1{ font-size: 28px; }
 }
+
+/* =========================================================
+   MEMBER PAGE (Member only)
+   - Research CSS는 건드리지 않고, Member 페이지가 깨지지 않도록 별도 정의
+========================================================= */
+
+.member-page{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.member-section{
+  margin: 30px 0 44px;
+}
+
+.member-section h2{
+  margin: 0 0 8px;
+  font-size: 20px;
+  letter-spacing: -0.2px;
+}
+
+.member-section .section-desc{
+  margin: 0 0 14px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ✅ 기존에 member-group을 inline style로 flex column 쓰고 있는데
+   앞으로는 통일해서 member-list 사용 권장 */
+.member-list{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 카드 베이스 */
+.member-card{
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px 18px;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+
+/* 클릭 가능한 카드 */
+.member-card.member-link{
+  cursor: pointer;
+}
+
+.member-card.member-link:hover{
+  transform: translateY(-2px);
+  border-color: #dbe3ee;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.10);
+}
+
+/* 카드 내부 레이아웃: 사진 + 텍스트 */
+.member-card-content{
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* 사진 */
+.member-photo{
+  width: 170px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+}
+
+/* 텍스트 */
+.member-text{ min-width: 0; }
+
+.member-name{
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.2px;
+  margin: 0 0 6px;
+}
+
+.member-role{
+  font-size: 13px;
+  color: #475569;
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.member-detail{
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 4px 0;
+}
+
+.member-detail a{
+  color: #0f172a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* PI badge */
+.member-badge{
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #dbeafe;
+  margin-left: 8px;
+  font-weight: 800;
+  vertical-align: middle;
+}
+
+/* DETAIL 링크 */
+.member-actions{
+  margin-top: 10px;
+}
+
+.detail-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #0f172a;
+  text-decoration: none;
+  border: 1px solid #e5e7eb;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.detail-link:hover{
+  background: #f8fafc;
+}
+
+/* Responsive */
+@media (max-width: 760px){
+  .member-card-content{
+    grid-template-columns: 1fr;
+  }
+  .member-photo{
+    width: 100%;
+    height: 240px;
+  }
+}
+
+/* =========================
+   Publications Page
+========================= */
+
+.publication-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 18px 60px;
+}
+
+.page-hero {
+  padding: 18px 0 14px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  margin-bottom: 18px;
+}
+
+.page-hero h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+
+.page-sub {
+  margin: 0;
+  opacity: 0.8;
+}
+
+.pub-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 16px 0 22px;
+}
+
+.pub-hint {
+  font-size: 0.92rem;
+  opacity: 0.75;
+}
+
+.pub-years {
+  display: grid;
+  gap: 18px;
+}
+
+.pub-year {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.pub-year-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.pub-year-head h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.pub-count {
+  font-size: 0.92rem;
+  opacity: 0.75;
+}
+
+.pub-list {
+  margin: 0;
+  padding-left: 20px; /* keep ordered-list numbering */
+  display: grid;
+  gap: 12px;
+}
+
+.pub-item {
+  list-style: decimal;
+  padding: 14px 14px 12px;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.pub-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.pub-badge {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(0,0,0,0.14);
+  background: rgba(0,0,0,0.03);
+}
+
+.pub-badge.conf {
+  background: rgba(0,0,0,0.05);
+}
+
+.pub-badge.preprint {
+  background: rgba(0,0,0,0.02);
+  border-style: dashed;
+}
+
+.pub-venue {
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.pub-date {
+  opacity: 0.75;
+  font-size: 0.9rem;
+}
+
+.pub-title {
+  font-size: 1.05rem;
+  margin: 0 0 6px;
+  line-height: 1.35;
+}
+
+.pub-authors {
+  margin: 0 0 10px;
+  opacity: 0.85;
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.pub-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.92rem;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  padding-bottom: 2px;
+}
+
+.pub-link:hover {
+  opacity: 0.8;
+}
+
+.pub-note {
+  margin: 0;
+  font-size: 0.92rem;
+  opacity: 0.75;
+}
+
+/* Active nav link (optional) */
+header nav a.active {
+  font-weight: 700;
+  border-bottom: 2px solid rgba(0,0,0,0.55);
+  padding-bottom: 2px;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .pub-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .page-hero h1 {
+    font-size: 1.7rem;
+  }
+  .pub-year {
+    padding: 14px;
+  }
+}
+
+/* Year-level filter buttons */
+.pub-year-filters {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0 14px;
+}
+
+.pub-filter-btn {
+  border: 1px solid rgba(0,0,0,0.16);
+  background: #fff;
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.92rem;
+}
+
+.pub-filter-btn:hover { opacity: 0.85; }
+
+.pub-filter-btn.active {
+  font-weight: 700;
+  border-color: rgba(0,0,0,0.35);
+}
+
+.pub-item.is-hidden { display: none; }
+
+/* PDF button-like link (optional, if you want stronger affordance) */
+.pub-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.92rem;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 10px;
+  padding: 6px 10px;
+}
+.pub-link:hover { opacity: 0.85; }
