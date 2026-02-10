@@ -27,7 +27,8 @@
 ========================= */
 .photo-slider {
   position: relative;
-  max-width: 1500px;   
+  max-width: 2000px;   
+  max-height: 1200px;
   margin: 0 auto;
   padding: 0 12px;
 }
