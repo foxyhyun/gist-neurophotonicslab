@@ -1,5 +1,5 @@
 /* =========================================================
-   0) Base / Layout
+   Base / Layout (GLOBAL)
 ========================================================= */
 * { box-sizing: border-box; }
 
@@ -29,7 +29,7 @@ footer{
 }
 
 /* =========================================================
-   1) Header / Nav
+   Header / Nav
 ========================================================= */
 header{
   background: #111827;
@@ -40,7 +40,10 @@ header{
   align-items: center;
 }
 
-header .logo{ font-weight: 700; }
+header .logo{
+  font-weight: 700;
+  font-size: 1rem;
+}
 
 nav a{
   color: #e5e7eb;
@@ -54,14 +57,8 @@ nav a:hover{
   text-decoration: underline;
 }
 
-header nav a.active{
-  font-weight: 700;
-  border-bottom: 2px solid rgba(255,255,255,0.6);
-  padding-bottom: 2px;
-}
-
 /* =========================================================
-   2) Buttons (공용)
+   Buttons (GLOBAL)
 ========================================================= */
 .btn{
   display: inline-flex;
@@ -77,122 +74,6 @@ header nav a.active{
   cursor: pointer;
 }
 
-.btn:hover{ background: #f8fafc; }
-
-.btn-detail{
-  background: #0f172a;
-  border-color: #0f172a;
-  color: #fff;
-  padding: 9px 12px;
-  border-radius: 10px;
-  font-size: 12px;
-  white-space: nowrap;
-}
-
-.btn-detail:hover{
-  background: #111c33;
-  border-color: #111c33;
-}
-
-/* =========================================================
-   3) Research Page
-========================================================= */
-.research-page{
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.research-top h1{
-  font-size: 34px;
-  letter-spacing: -0.4px;
-}
-
-.research-top-desc{
-  color: #475569;
-  font-size: 15px;
-}
-
-/* Tabs */
-.research-tabs{
-  display: flex;
-  gap: 10px;
-  padding: 12px 0 16px;
-  flex-wrap: wrap;
-}
-
-.tab{
-  border: 1px solid #e5e7eb;
-  border-radius: 999px;
-  padding: 10px 14px;
-  font-weight: 800;
-  font-size: 13px;
-  cursor: pointer;
-}
-
-.tab.active{
-  border-color: #111827;
-  color: #111827;
-}
-
-.tab-panel{ display: none; }
-.tab-panel.active{ display: block; }
-
-/* Research item */
-.research-item{
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 10px 28px rgba(15,23,42,0.06);
-}
-
-/* =========================================================
-   4) Modal
-========================================================= */
-.modal{
-  position: fixed;
-  inset: 0;
-  display: none;
-  z-index: 9999;
-}
-
-.modal.open{ display: block; }
-
-.modal-backdrop{
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,.55);
-}
-
-.modal-dialog{
-  position: relative;
-  max-width: 1100px;
-  margin: 42px auto;
-  background: #fff;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-/* =========================================================
-   5) Publications Page
-========================================================= */
-.publication-page{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 32px 18px 60px;
-}
-
-.pub-year{
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 14px;
-  padding: 18px;
-  background: #fff;
-}
-
-/* =========================================================
-   6) Responsive
-========================================================= */
-@media (max-width: 600px){
-  main{ padding: 22px 16px; }
-  header{ padding: 12px 18px; }
+.btn:hover{
+  background: #f8fafc;
 }
