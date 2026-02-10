@@ -1,0 +1,106 @@
+/* =========================================================
+   Member Page Only
+========================================================= */
+
+.member-page{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.member-section{
+  margin: 30px 0 44px;
+}
+
+.member-list{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* 카드 */
+.member-card{
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 18px 20px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(15,23,42,0.06);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.member-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(15,23,42,0.12);
+}
+
+/* 카드 레이아웃 */
+.member-card-content{
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+/* =========================
+   🔵 프로필 이미지 (원형)
+========================= */
+.member-photo{
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+  background: #f8fafc;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+/* 텍스트 */
+.member-name{
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.member-role{
+  font-size: 13px;
+  color: #475569;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.member-detail{
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* DETAIL 버튼 */
+.member-actions{
+  margin-top: 10px;
+}
+
+.detail-link{
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  text-decoration: none;
+  color: #0f172a;
+}
+
+.detail-link:hover{
+  background: #f8fafc;
+}
+
+/* Responsive */
+@media (max-width: 700px){
+  .member-card-content{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .member-photo{
+    margin: 0 auto 10px;
+  }
+}
