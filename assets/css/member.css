@@ -1,33 +1,51 @@
 /* =========================================================
-   MEMBER PAGE ONLY CSS
-   - member index / member detail 전용
+   MEMBER PAGE ONLY
+   - index.html (member list)
+   - individual member detail pages
 ========================================================= */
 
-/* =========================
-   Common wrapper
-========================= */
+/* ---------- Member page wrapper ---------- */
 .member-page {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 32px 18px 60px;
+  padding: 32px 20px 60px;
 }
 
-/* =========================
-   MEMBER LIST (index.html)
-========================= */
+.member-page h1 {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+/* ---------- Section ---------- */
+.member-section {
+  margin-bottom: 48px;
+}
+
+.member-section h2 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.section-desc {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 16px;
+}
+
+/* ---------- Member list ---------- */
 .member-list {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-/* 카드 전체 */
+/* ---------- Member card ---------- */
 .member-card {
+  background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 16px;
-  padding: 18px;
-  background: #ffffff;
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  padding: 16px 18px;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -36,43 +54,43 @@
 }
 
 .member-card.member-link:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.10);
 }
 
-/* 카드 내부 레이아웃 */
+/* ---------- Card layout ---------- */
 .member-card-content {
   display: grid;
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: 150px 1fr;
   gap: 18px;
   align-items: center;
 }
 
-/* ===== 카드용 사진 (네모 유지!) ===== */
+/* ---------- Thumbnail (INDEX PAGE) ---------- */
 .member-photo {
-  width: 160px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 14px; /* ❗ 원형 아님 */
+  width: 150px;
+  height: 150px;
+  border-radius: 14px;          /* ❗ 네모 유지 */
+  object-fit: cover;            /* 얼굴 안 찌그러짐 */
+  background: #f1f5f9;
   border: 1px solid #e5e7eb;
-  background: #f8fafc;
 }
 
-/* 텍스트 */
+/* ---------- Text ---------- */
 .member-text {
   min-width: 0;
 }
 
 .member-name {
-  font-weight: 800;
   font-size: 18px;
-  margin: 0 0 6px;
+  font-weight: 800;
+  margin-bottom: 4px;
 }
 
 .member-role {
   font-size: 13px;
-  color: #475569;
   font-weight: 700;
+  color: #475569;
   margin-bottom: 6px;
 }
 
@@ -80,10 +98,28 @@
   font-size: 13px;
   color: #64748b;
   line-height: 1.6;
-  margin: 4px 0;
 }
 
-/* DETAIL 버튼 복구 */
+.member-detail a {
+  color: #0f172a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---------- PI badge ---------- */
+.member-badge {
+  display: inline-block;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #dbeafe;
+  margin-left: 8px;
+  font-weight: 800;
+}
+
+/* ---------- DETAIL button ---------- */
 .member-actions {
   margin-top: 10px;
 }
@@ -92,90 +128,86 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  padding: 8px 14px;
   font-size: 12px;
   font-weight: 800;
-  padding: 8px 14px;
-  border-radius: 10px;
-  border: 1px solid #e5e7eb;
-  background: #ffffff;
-  color: #0f172a;
+  color: #ffffff;
+  background: #0f172a;
+  border-radius: 999px;
   text-decoration: none;
 }
 
 .detail-link:hover {
-  background: #f8fafc;
+  background: #111c33;
 }
 
-/* =========================
-   MEMBER DETAIL PAGE
-   (sihyunlee.html 등)
-========================= */
+/* =========================================================
+   MEMBER DETAIL PAGE (sihyunlee.html 등)
+========================================================= */
 
 .profile {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto 40px;
 }
 
-/* 상단 영역 */
 .profile-header {
   display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 28px;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
   align-items: center;
+  margin-bottom: 40px;
 }
 
-/* ===== detail 페이지 사진: 크게 + 원형 ===== */
+/* ---------- BIG ROUND PROFILE IMAGE ---------- */
 .profile-photo {
-  width: 220px;
-  height: 220px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;           /* ✅ 원형 */
   object-fit: cover;
-  border-radius: 50%; /* ✅ 여기서만 원형 */
-  border: 4px solid #ffffff;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18);
+  border: 4px solid #e5e7eb;
   background: #f1f5f9;
 }
 
-/* 이름 / 소속 */
+/* ---------- Profile text ---------- */
 .profile-name {
-  margin: 0 0 6px;
-  font-size: 28px;
-  font-weight: 900;
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 8px;
 }
 
 .profile-role {
-  margin: 0 0 10px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   color: #334155;
+  margin-bottom: 8px;
 }
 
 .profile-affiliation {
   font-size: 14px;
   color: #475569;
   line-height: 1.6;
-}
-
-.profile-contact {
-  margin-top: 10px;
-  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .profile-contact a {
-  color: #0f172a;
+  font-weight: 700;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.profile-contact a:hover {
   text-decoration: underline;
 }
 
-/* =========================
-   Detail sections
-========================= */
+/* ---------- Sections ---------- */
 .profile-section {
   max-width: 900px;
-  margin: 0 auto 34px;
+  margin: 0 auto 36px;
 }
 
 .profile-section h2 {
-  margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 22px;
+  margin-bottom: 12px;
 }
 
 .profile-section ul {
@@ -187,20 +219,16 @@
   line-height: 1.6;
 }
 
-/* =========================
+/* ---------- Small text ---------- */
+.small-text {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* =========================================================
    Responsive
-========================= */
-@media (max-width: 760px) {
-  .member-card-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .member-photo {
-    width: 100%;
-    height: 240px;
-  }
-
+========================================================= */
+@media (max-width: 900px) {
   .profile-header {
     grid-template-columns: 1fr;
     text-align: center;
@@ -208,5 +236,16 @@
 
   .profile-photo {
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .member-card-content {
+    grid-template-columns: 1fr;
+  }
+
+  .member-photo {
+    width: 100%;
+    height: 220px;
   }
 }
