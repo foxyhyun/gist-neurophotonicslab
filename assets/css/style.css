@@ -1,7 +1,9 @@
 /* =========================================================
    Base / Layout (GLOBAL)
 ========================================================= */
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body{
   margin: 0;
@@ -11,13 +13,23 @@ body{
   background: #ffffff;
 }
 
+/* ✅ 기본 페이지 레이아웃 */
 main{
   max-width: 1300px;
   margin: 0 auto;
   padding: 28px 24px;
 }
 
-h1,h2,h3{ margin-top: 0; }
+/* ✅ HOME 페이지만 main 제한 해제 */
+body.home main{
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+h1,h2,h3{
+  margin-top: 0;
+}
 
 footer{
   text-align: center;

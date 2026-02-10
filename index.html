@@ -1,101 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <title>GIST Neurophotonics Lab</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="./assets/css/home.css" />
 
-
+  <!-- 공통 스타일 -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- 홈 전용 -->
+  <link rel="stylesheet" href="assets/css/home.css" />
 </head>
-<body>
-  <header>
-    <div class="logo">GIST Neurophotonics Lab</div>
-    <nav>
-      <a href="./">Home</a>
-      <a href="./research/">Research</a>
-      <a href="./member/">Member</a>
-      <a href="./project/">Project</a>
-      <a href="./publication/">Publication</a>
-      <a href="./news/">News</a>
-      <a href="./communication/">Communication</a>
-    </nav>
 
-  </header>
+<body class="home">
 
-  <main class="home-page">
+<header>
+  <div class="logo">GIST Neurophotonics Lab</div>
+  <nav>
+    <a href="./">Home</a>
+    <a href="./research/">Research</a>
+    <a href="./member/">Member</a>
+    <a href="./project/">Project</a>
+    <a href="./publication/">Publication</a>
+    <a href="./news/">News</a>
+    <a href="./communication/">Communication</a>
+  </nav>
+</header>
 
-    <section class="home-intro">
-      <div class="home-intro-inner">
-        <h1>Welcome to GIST Neurophotonics Lab</h1>
+<!-- =========================
+     INTRO
+========================= -->
+<section class="home-intro">
+  <h1>Welcome to GIST Neurophotonics Lab</h1>
+</section>
+
+<!-- =========================
+     FULL WIDTH PHOTO SLIDER
+     (main 밖 → width 제한 안 받음)
+========================= -->
+<section class="home-hero">
+  <div class="photo-slider">
+    <button class="slider-btn prev">‹</button>
+
+    <div class="slider-viewport">
+      <img
+        src="assets/img/home/group_2025.jpg"
+        alt="Lab group photo"
+        class="slider-image"
+      />
+      <div class="slider-caption">Lab group photo (2025)</div>
+    </div>
+
+    <button class="slider-btn next">›</button>
+  </div>
+
+  <div class="slider-dots">
+    <button class="dot active"></button>
+    <button class="dot"></button>
+  </div>
+</section>
+
+<!-- =========================
+     MAIN (width 제한 영역)
+========================= -->
+<main class="home-page">
+
+  <!-- Latest News -->
+  <section class="home-section">
+    <div class="section-head-row">
+      <div>
+        <h2>Latest Lab News</h2>
+        <p class="section-sub">Recent updates, awards, and events.</p>
       </div>
-      </section>
+      <a href="./news/" class="btn">View all</a>
+    </div>
 
+    <div class="news-grid">
+      <article class="news-card">
+        <div class="news-meta">2025.11.24</div>
+        <h3 class="news-title">2025 SPIE ABC Conference</h3>
+        <p class="news-desc">
+          Our lab participated in SPIE ABC 2025 and presented recent work.
+        </p>
+        <a href="./news/" class="news-link">Read more →</a>
+      </article>
 
-    <!-- Group photo slider -->
-    <section class="home-section">
-      <div class="photo-slider" id="photoSlider" aria-label="Lab photo slider">
-        <button class="slider-btn prev" type="button" aria-label="Previous photo">
-          ‹
-        </button>
+      <article class="news-card">
+        <div class="news-meta">2025.11.24</div>
+        <h3 class="news-title">Poster Presentation Award</h3>
+        <p class="news-desc">
+          Congratulations on receiving the poster presentation award.
+        </p>
+        <a href="./news/" class="news-link">Read more →</a>
+      </article>
 
-        <div class="slider-viewport">
-          <img id="sliderImage" class="slider-image" src="" alt="Lab group photo" />
-          <div class="slider-caption" id="sliderCaption"></div>
-        </div>
+      <article class="news-card">
+        <div class="news-meta">2025.03.20</div>
+        <h3 class="news-title">Workshop Presentation – Akm Ashiquzzaman</h3>
+        <p class="news-desc">
+          Akm presented at a workshop and shared ongoing research progress.
+        </p>
+        <a href="./news/" class="news-link">Read more →</a>
+      </article>
+    </div>
+  </section>
 
-        <button class="slider-btn next" type="button" aria-label="Next photo">
-          ›
-        </button>
+</main>
 
-        <div class="slider-dots" id="sliderDots" aria-label="Photo navigation dots"></div>
-      </div>
-    </section>
+<footer>
+  © 2025 GIST Neurophotonics Lab. All rights reserved.
+</footer>
 
-    <!-- Latest News -->
-    <section class="home-section">
-      <div class="section-head section-head-row">
-        <div>
-          <h2>Latest Lab News</h2>
-          <p class="section-sub">Recent updates, awards, and events.</p>
-        </div>
-        <a class="btn small" href="./news/">View all</a>
-      </div>
-
-      <div class="news-grid">
-        <!-- 카드 1 -->
-        <article class="news-card">
-          <div class="news-meta">2025.11.24</div>
-          <h3 class="news-title">2025 SPIE ABC Conference</h3>
-          <p class="news-desc">Our lab participated in SPIE ABC 2025 and presented recent work.</p>
-          <a class="news-link" href="./news/">Read more →</a>
-        </article>
-
-        <!-- 카드 2 -->
-        <article class="news-card">
-          <div class="news-meta">2025.11.24</div>
-          <h3 class="news-title">Poster Presentation Award</h3>
-          <p class="news-desc">Congratulations on receiving the poster presentation award.</p>
-          <a class="news-link" href="./news/">Read more →</a>
-        </article>
-
-        <!-- 카드 3 -->
-        <article class="news-card">
-          <div class="news-meta">2025.03.20</div>
-          <h3 class="news-title">Workshop Presentation – Akm Ashiquzzaman</h3>
-          <p class="news-desc">Akm presented at a workshop and shared ongoing research progress.</p>
-          <a class="news-link" href="./news/">Read more →</a>
-        </article>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    © 2025 GIST Neurophotonics Lab. All rights reserved.
-  </footer>
-
-  <script src="./assets/js/main.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
