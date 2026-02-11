@@ -68,7 +68,7 @@
 
 /* ---------- Thumbnail (INDEX PAGE) ---------- */
 .member-photo {
-  width: 180px;
+  width: 150px;
   height: 180px;
   border-radius: 14px;          /* ❗ 네모 유지 */
   object-fit: cover;            /* 얼굴 안 찌그러짐 */
