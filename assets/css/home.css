@@ -44,10 +44,10 @@
   min-width: 100%;
 }
 
-.slide img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+.slider-image {
+  min-width: 100%;
+  height: 520px;          /* 고정 */
+  object-fit: cover;      /* 잘라도 비율 유지 */
   display: block;
 }
 

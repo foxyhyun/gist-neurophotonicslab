@@ -5,17 +5,16 @@
   <title>GIST Neurophotonics Lab</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- 공통 스타일 -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  <!-- 홈 전용 -->
   <link rel="stylesheet" href="assets/css/home.css" />
 </head>
 
 <body class="home">
 
-<header>
-  <div class="logo">GIST Neurophotonics Lab</div>
-    <nav>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">GIST Neurophotonics Lab</div>
+    <nav class="main-nav">
       <a href="/gist-neurophotonicslab/">Home</a>
       <a href="/gist-neurophotonicslab/research/">Research</a>
       <a href="/gist-neurophotonicslab/member/">Member</a>
@@ -24,69 +23,54 @@
       <a href="/gist-neurophotonicslab/news/">News</a>
       <a href="/gist-neurophotonicslab/communication/">Communication</a>
     </nav>
+  </div>
 </header>
 
-<!-- =========================
-     INTRO
-========================= -->
-<section class="home-intro">
-  <h1>Welcome to GIST Neurophotonics Lab</h1>
+<!-- Intro -->
+<section class="section home-intro">
+  <div class="container">
+    <h1 class="page-title">Welcome to GIST Neurophotonics Lab</h1>
+  </div>
 </section>
 
-<!-- =========================
-     FULL WIDTH PHOTO SLIDER
-     (main 밖 → width 제한 안 받음)
-========================= -->
+<!-- Hero Slider -->
 <section class="home-hero">
   <div class="photo-slider">
     <button class="slider-btn prev">‹</button>
 
     <div class="slider-viewport">
       <div class="slider-track">
-
-        <img
-          src="assets/img/main/main1.png"
-          alt="2025 - Cherry Blossom day"
-          class="slider-image"
-        />
-
-        <img
-          src="assets/img/gallery/2026/2026_workshop6.png"
-          alt="2026 - NPL Workshop"
-          class="slider-image"
-        />
-
+        <img src="..." class="slider-image" />
+        <img src="..." class="slider-image" />
       </div>
     </div>
 
     <button class="slider-btn next">›</button>
   </div>
 
-  <div class="slider-dots">
-    <button class="dot active"></button>
-    <button class="dot"></button>
-  </div>
+  <div class="slider-dots"></div>
 </section>
 
 
-<!-- =========================
-     MAIN (width 제한 영역)
-========================= -->
-<main class="home-page">  
+<main class="section">
 
   <!-- Latest News -->
-  <section class="home-section">
-    <div class="section-head-row">
+  <section class="home-section container">
+
+    <div class="section-head">
       <div>
-        <h2>Latest Lab News</h2>
-        <p class="section-sub">Recent updates, awards, and events.</p>
+        <h2 class="section-title">Latest Lab News</h2>
+        <p class="section-sub">
+          Recent updates, awards, and events.
+        </p>
       </div>
       <a href="./news/" class="btn">View all</a>
     </div>
 
     <div class="news-grid">
+
       <article class="news-card">
-        <div class="news-meta">2025.11.24</div>
+        <time class="news-meta">2025.11.24</time>
         <h3 class="news-title">2025 SPIE ABC Conference</h3>
         <p class="news-desc">
           Our lab participated in SPIE ABC 2025 and presented recent work.
@@ -95,7 +79,7 @@
       </article>
 
       <article class="news-card">
-        <div class="news-meta">2025.11.24</div>
+        <time class="news-meta">2025.11.24</time>
         <h3 class="news-title">Poster Presentation Award</h3>
         <p class="news-desc">
           Congratulations on receiving the poster presentation award.
@@ -104,22 +88,27 @@
       </article>
 
       <article class="news-card">
-        <div class="news-meta">2025.03.20</div>
+        <time class="news-meta">2025.03.20</time>
         <h3 class="news-title">Workshop Presentation – Akm Ashiquzzaman</h3>
         <p class="news-desc">
           Akm presented at a workshop and shared ongoing research progress.
         </p>
         <a href="./news/" class="news-link">Read more →</a>
       </article>
+
     </div>
+
   </section>
 
 </main>
 
-<footer>
-  © 2025 GIST Neurophotonics Lab. All rights reserved.
+<footer class="site-footer">
+  <div class="container">
+    © 2025 GIST Neurophotonics Lab. All rights reserved.
+  </div>
 </footer>
 
+<script src="assets/js/home.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
