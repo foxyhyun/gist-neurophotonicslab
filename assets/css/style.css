@@ -1,9 +1,7 @@
 /* =========================================================
    Base / Layout (GLOBAL)
 ========================================================= */
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body{
   margin: 0;
@@ -13,16 +11,13 @@ body{
   background: #ffffff;
 }
 
-/* ✅ 기본 페이지 레이아웃 */
 main{
   max-width: 1300px;
   margin: 0 auto;
   padding: 28px 24px;
 }
 
-h1,h2,h3{
-  margin-top: 0;
-}
+h1,h2,h3{ margin-top: 0; }
 
 footer{
   text-align: center;
@@ -34,30 +29,40 @@ footer{
 }
 
 /* =========================================================
-   Header / Nav
+   Header / Nav (GLOBAL)
+   - ✅ header 안에 logo가 없어도 깨지지 않게 설계
 ========================================================= */
 header{
   background: #111827;
   color: #fff;
   padding: 12px 40px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
+/* logo가 있으면 왼쪽에, 없으면 nav가 그냥 첫 요소 */
 header .logo{
   font-weight: 700;
   font-size: 1rem;
+  margin-right: 24px;
 }
 
-nav a{
+/* ✅ nav만 있는 페이지(research/index.html 같은)에서도 정렬 유지 */
+header nav{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+header nav a{
   color: #e5e7eb;
-  margin-left: 16px;
   text-decoration: none;
   font-size: 0.95rem;
+  padding: 6px 2px;
 }
 
-nav a:hover{
+header nav a:hover{
   color: #ffffff;
   text-decoration: underline;
 }
@@ -81,4 +86,13 @@ nav a:hover{
 
 .btn:hover{
   background: #f8fafc;
+}
+
+@media (max-width: 900px){
+  header{
+    padding: 12px 18px;
+  }
+  main{
+    padding: 22px 16px;
+  }
 }
