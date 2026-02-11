@@ -1,67 +1,396 @@
-<main class="member-page">
-  <!-- .member-page → member.css / 전체 폭 & 패딩 제어 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Member | GIST Neurophotonics Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <h1>Members</h1>
+  <!-- [style.css] 전역: body, header, nav, main, footer, .btn 등 -->
+  <link rel="stylesheet" href="../assets/css/style.css">
 
-  <!-- =========================
-       Professor Section
-       .member-section → section margin
-       h2 → section 제목 스타일
-  ========================= -->
-  <section class="member-section" id="professor">
-    <h2>Professor</h2>
+  <!-- [member.css] 멤버 전용: .member-page, .member-section, .member-list, .member-card ... -->
+  <link rel="stylesheet" href="../assets/css/member.css">
+</head>
 
-    <!-- .member-list → 카드 세로 정렬 (flex column) -->
-    <div class="member-list">
+<body>
+  <!-- [style.css] header: header, .logo, nav a -->
+  <header>
+    <!-- [style.css] .logo -->
+    <div class="logo">GIST Neurophotonics Lab</div>
 
-      <!-- .member-card → 카드 박스 스타일
-           (border, shadow, hover effect) -->
-      <div class="member-card member-link"
-           role="link" tabindex="0"
-           onclick="location.href='euiheonchung.html';"
-           onkeydown="if(event.key==='Enter'){location.href='euiheonchung.html';}">
+    <!-- [style.css] nav / nav a -->
+    <nav>
+      <!-- ⚠️ 절대경로 사용 중: GitHub Pages 프로젝트에선 OK, 로컬에선 404 가능 -->
+      <a href="/gist-neurophotonicslab/">Home</a>
+      <a href="/gist-neurophotonicslab/research/">Research</a>
+      <a href="/gist-neurophotonicslab/member/">Member</a>
+      <a href="/gist-neurophotonicslab/publication/">Publication</a>
+      <a href="/gist-neurophotonicslab/gallery/">Gallery</a>
+      <a href="/gist-neurophotonicslab/news/">News</a>
+      <a href="/gist-neurophotonicslab/communication/">Communication</a>
+    </nav>
+  </header>
 
-        <!-- .member-card-content → grid (사진 + 텍스트 2열 구조) -->
-        <div class="member-card-content">
+  <!-- [member.css] .member-page: 페이지 폭/패딩/타이틀 -->
+  <main class="member-page">
+    <!-- [member.css] .member-page h1 -->
+    <h1>Members</h1>
 
-          <!-- .member-photo → 고정 150x180 썸네일 -->
-          <img src="../assets/img/member/euiheonchung.png"
-               alt="Photo of Euiheon Chung"
-               class="member-photo" />
+    <!-- =====================================================
+         Professor
+         [member.css] .member-section, .member-list, .member-card...
+    ====================================================== -->
+    <section class="member-section" id="professor">
+      <!-- [member.css] .member-section h2 -->
+      <h2>Professor</h2>
 
-          <!-- .member-text → 텍스트 영역 -->
-          <div class="member-text">
+      <!-- [member.css] .member-list: 카드 리스트(세로, gap) -->
+      <div class="member-list">
+        <!-- [member.css] .member-card: 카드 UI
+             NOTE: member-link는 클릭 가능한 카드용 클래스(현재 member.css에 별도 스타일 없음) -->
+        <div class="member-card member-link" role="link" tabindex="0"
+             onclick="location.href='euiheonchung.html';"
+             onkeydown="if(event.key==='Enter'){location.href='euiheonchung.html';}">
+          <!-- [member.css] .member-card-content: 사진+텍스트 2열 grid -->
+          <div class="member-card-content">
 
-            <!-- .member-name → 이름 bold 크게 -->
-            <div class="member-name">
-              Prof. Euiheon Chung
-              <!-- .member-badge → 파란 pill 스타일 -->
-              <span class="member-badge">PI</span>
+            <!-- [member.css] .member-photo: 썸네일 크기/비율 통일 -->
+            <img src="../assets/img/member/euiheonchung.png" alt="Photo of Euiheon Chung" class="member-photo" />
+
+            <!-- [member.css] .member-text -->
+            <div class="member-text">
+              <!-- [member.css] .member-name -->
+              <div class="member-name">
+                Prof. Euiheon Chung
+                <!-- [member.css] .member-badge -->
+                <span class="member-badge">PI</span>
+              </div>
+
+              <!-- [member.css] .member-role -->
+              <div class="member-role">Full Professor, Department of Biomedical Science and Engineering (BMSE), GIST</div>
+
+              <!-- [member.css] .member-detail -->
+              <div class="member-detail">Translational neurophotonic technologies; functional optical imaging &amp; neuromodulation</div>
+              <div class="member-detail">Focus: neurovascular diseases, neuropathic pain (Director, Gliopathic Pain Research Center)</div>
+
+              <!-- [member.css] .member-actions / .detail-link -->
+              <div class="member-actions">
+                <a href="euiheonchung.html" class="detail-link">DETAIL</a>
+              </div>
             </div>
-
-            <!-- .member-role → 직함 작은 bold -->
-            <div class="member-role">
-              Full Professor, Department of Biomedical Science and Engineering (BMSE), GIST
-            </div>
-
-            <!-- .member-detail → 회색 설명 텍스트 -->
-            <div class="member-detail">
-              Translational neurophotonic technologies; functional optical imaging &amp; neuromodulation
-            </div>
-
-            <div class="member-detail">
-              Focus: neurovascular diseases, neuropathic pain (Director, Gliopathic Pain Research Center)
-            </div>
-
-            <!-- .member-actions → 버튼 영역 margin -->
-            <div class="member-actions">
-              <!-- .detail-link → 둥근 검은 버튼 -->
-              <a href="euiheonchung.html" class="detail-link">DETAIL</a>
-            </div>
-
           </div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- =====================================================
+         Research Professor
+    ====================================================== -->
+    <section class="member-section" id="research-professor">
+      <h2>Research Professor</h2>
+
+      <div class="member-list">
+        <!-- 카드(사진 없는 텍스트형)도 .member-card 스타일 그대로 적용됨 -->
+        <div class="member-card">
+          <div class="member-name">Young-ro Kim</div>
+          <div class="member-role">Adjunct Professor</div>
+          <div class="member-detail">Email: <a href="mailto:spmkim@gmail.com">spmkim@gmail.com</a></div>
+          <div class="member-detail">Athinoula A. Martinos Center for Biomedical Imaging, Massachusetts General Hospital (MGH)</div>
+          <div class="member-detail">Department of Radiology, Harvard Medical School, Boston, MA, USA</div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-name">Sang Seong Kim</div>
+          <div class="member-role">Research Professor</div>
+          <div class="member-detail">Email: <a href="mailto:chiralcenter21@gmail.com">chiralcenter21@gmail.com</a></div>
+          <div class="member-detail">Drug development for alleviating ion channel-derived pain sensation</div>
+          <div class="member-detail">Understanding hippocampal circuit alteration in neurodegeneration</div>
+          <div class="member-detail">Characterization of neural coding in olfactory and vomeronasal system</div>
+          <div class="member-detail">Development of next-generation optical stimulation in multielectrode array</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Post-doc
+    ====================================================== -->
+    <section class="member-section" id="postdoc">
+      <h2>Post-doc</h2>
+
+      <div class="member-list">
+        <div class="member-card member-link" role="link" tabindex="0"
+             onclick="location.href='gehan.html';"
+             onkeydown="if(event.key==='Enter'){location.href='gehan.html';}">
+          <div class="member-card-content">
+            <img src="../assets/img/member/gehan.png" alt="Photo of Gehan Fatima" class="member-photo" />
+            <div class="member-text">
+              <div class="member-name">Gehan Fatima</div>
+              <div class="member-role">Post-Doc</div>
+              <div class="member-detail">Email: <a href="mailto:gehanfatima@gist.ac.kr">gehanfatima@gist.ac.kr</a></div>
+              <div class="member-detail">TEL: 062-715-2756</div>
+              <div class="member-detail">Research: Alzheimer’s disease (AD), vascular biology, in vivo two-photon imaging</div>
+              <div class="member-actions">
+                <a href="gehan.html" class="detail-link">DETAIL</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Ph.D
+    ====================================================== -->
+    <section class="member-section" id="phd">
+      <h2>Ph.D Students</h2>
+
+      <div class="member-list">
+        <div class="member-card member-link" role="link" tabindex="0"
+             onclick="location.href='akm.html';"
+             onkeydown="if(event.key==='Enter'){location.href='akm.html';}">
+          <div class="member-card-content">
+            <img src="../assets/img/member/ashiq.png" alt="Photo of Akm Ashiquzzaman" class="member-photo" />
+            <div class="member-text">
+              <div class="member-name">Akm Ashiquzzaman</div>
+              <div class="member-role">Ph.D Student</div>
+              <div class="member-detail">Research Interest: AI-based image processing and optical setup for image acquisition</div>
+              <div class="member-detail">Education: MS (Chonnam National University), B.Sc. (University of Asia Pacific)</div>
+              <div class="member-actions">
+                <a href="akm.html" class="detail-link">DETAIL</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="member-card member-link" role="link" tabindex="0"
+             onclick="location.href='fatemeh.html';"
+             onkeydown="if(event.key==='Enter'){location.href='fatemeh.html';}">
+          <div class="member-card-content">
+            <img src="../assets/img/member/fatemeh.png" alt="Photo of Fatemeh Dehghan Nezhad Derarandash" class="member-photo" />
+            <div class="member-text">
+              <div class="member-name">Fatemeh Dehghan Nezhad Derarandash</div>
+              <div class="member-role">Ph.D Student</div>
+              <div class="member-detail">Email: <a href="mailto:f.dehghan.nezhad@gm.gist.ac.kr">f.dehghan.nezhad@gm.gist.ac.kr</a></div>
+              <div class="member-detail">TEL: 062-715-2761</div>
+              <div class="member-detail">OFFICE: 404</div>
+              <div class="member-detail">Research Interest: medical devices &amp; software, in-vivo imaging and deep understanding of brain functions</div>
+              <div class="member-actions">
+                <a href="fatemeh.html" class="detail-link">DETAIL</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="member-card member-link" role="link" tabindex="0"
+             onclick="location.href='acquah.html';"
+             onkeydown="if(event.key==='Enter'){location.href='acquah.html';}">
+          <div class="member-card-content">
+            <img src="../assets/img/member/acquah.png" alt="Photo of Acquah Emmanuel" class="member-photo" />
+            <div class="member-text">
+              <div class="member-name">Acquah Emmanuel</div>
+              <div class="member-role">Ph.D Student</div>
+              <div class="member-detail">Research Field: somatosensory system &amp; DRG; neuroimmune interactions; neuropathic pain mechanisms</div>
+              <div class="member-actions">
+                <a href="acquah.html" class="detail-link">DETAIL</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="member-card member-link" role="link" tabindex="0"
+             onclick="location.href='shudha.html';"
+             onkeydown="if(event.key==='Enter'){location.href='shudha.html';}">
+          <div class="member-card-content">
+            <img src="../assets/img/member/shudha.png" alt="Photo of Shudha Tasnim Iqbal" class="member-photo" />
+            <div class="member-text">
+              <div class="member-name">Shudha Tasnim Iqbal</div>
+              <div class="member-role">Ph.D Student</div>
+              <div class="member-detail">Research Field: bio-inspired vision systems; translational optical design for medical imaging &amp; diagnostics</div>
+              <div class="member-actions">
+                <a href="shudha.html" class="detail-link">DETAIL</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Integrated
+    ====================================================== -->
+    <section class="member-section" id="integrated">
+      <h2>Integrated (M.S./Ph.D)</h2>
+      <!-- [member.css] .section-desc -->
+      <p class="section-desc">석·박사 통합과정.</p>
+
+      <div class="member-list">
+        <div class="member-card member-link" role="link" tabindex="0"
+             onclick="location.href='youngseung.html';"
+             onkeydown="if(event.key==='Enter'){location.href='youngseung.html';}">
+          <div class="member-card-content">
+            <img src="../assets/img/member/youngseung.png" alt="Photo of Young-seung Yoo" class="member-photo" />
+            <div class="member-text">
+              <div class="member-name">Young-seung Yoo / 유영승</div>
+              <div class="member-role">Integrated (M.S./Ph.D) Student</div>
+              <div class="member-detail">Research Interest: optimized light control for in-vivo application; light-sheet microscopy; high-speed large area brain imaging</div>
+              <div class="member-actions"><a href="youngseung.html" class="detail-link">DETAIL</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="member-card member-link" role="link" tabindex="0"
+             onclick="location.href='nhat.html';"
+             onkeydown="if(event.key==='Enter'){location.href='nhat.html';}">
+          <div class="member-card-content">
+            <img src="../assets/img/member/nhat.png" alt="Photo of Tien Nhat Nguyen" class="member-photo" />
+            <div class="member-text">
+              <div class="member-name">Tien Nhat Nguyen / Nguyen, Tien Nhat</div>
+              <div class="member-role">Integrated (M.S./Ph.D) Student</div>
+              <div class="member-detail">Education: Integrated MS-PhD Candidate (BMSE, GIST); GIST Research Assistant (2019–2021); B.S. Biomedical Engineering (HUST, Vietnam)</div>
+              <div class="member-actions"><a href="nhat.html" class="detail-link">DETAIL</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="member-card member-link" role="link" tabindex="0"
+             onclick="location.href='sihyunlee.html';"
+             onkeydown="if(event.key==='Enter'){location.href='sihyunlee.html';}">
+          <div class="member-card-content">
+            <img src="../assets/img/member/sihyun.png" alt="Photo of Sihyun Lee" class="member-photo" />
+            <div class="member-text">
+              <div class="member-name">Sihyun Lee / 이시현</div>
+              <div class="member-role">Integrated (M.S./Ph.D) Student, GIST AI Graduate School</div>
+              <div class="member-detail">Medical AI, biomedical/microscopy image enhancement, neurophotonics</div>
+              <div class="member-detail">Email: <a href="mailto:tlgus7668@gm.gist.ac.kr">tlgus7668@gm.gist.ac.kr</a></div>
+              <div class="member-actions"><a href="sihyunlee.html" class="detail-link">DETAIL</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="member-card member-link" role="link" tabindex="0"
+             onclick="location.href='jaebong.html';"
+             onkeydown="if(event.key==='Enter'){location.href='jaebong.html';}">
+          <div class="member-card-content">
+            <img src="../assets/img/member/jaebong.png" alt="Photo of Jaebong Joe" class="member-photo" />
+            <div class="member-text">
+              <div class="member-name">Jaebong Joe/ 조재봉</div>
+              <div class="member-role">Integrated (M.S./Ph.D) Student, GIST Biomedical Engineering</div>
+              <div class="member-detail">Magnetic Stimulation</div>
+              <div class="member-detail">Email: <a href="mailto:philosophal@gm.gist.ac.kr">philosophal@gm.gist.ac.kr</a></div>
+              <div class="member-actions"><a href="jaebong.html" class="detail-link">DETAIL</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="member-card member-link" role="link" tabindex="0"
+             onclick="location.href='yejin.html';"
+             onkeydown="if(event.key==='Enter'){location.href='yejin.html';}">
+          <div class="member-card-content">
+            <img src="../assets/img/member/yejin.png" alt="Photo of Yejin Kim" class="member-photo" />
+            <div class="member-text">
+              <div class="member-name">Yejin Kim / 김예진</div>
+              <div class="member-role">Integrated (M.S./Ph.D) Student</div>
+              <div class="member-detail">Research Field: DRG (dorsal root ganglion), pain mechanisms, pain regulation</div>
+              <div class="member-detail">Email: <a href="mailto:judy024802@gmail.com">judy024802@gmail.com</a></div>
+              <div class="member-actions"><a href="yejin.html" class="detail-link">DETAIL</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="member-card member-link" role="link" tabindex="0"
+             onclick="location.href='daeun.html';"
+             onkeydown="if(event.key==='Enter'){location.href='daeun.html';}">
+          <div class="member-card-content">
+            <img src="../assets/img/member/daeun.png" alt="Photo of Daeun Roh" class="member-photo" />
+            <div class="member-text">
+              <div class="member-name">Daeun Roh / 노다은</div>
+              <div class="member-role">Integrated (M.S./Ph.D) Student</div>
+              <div class="member-detail">Research Field: neuropathic pain, computational modeling; DRG in pain processing</div>
+              <div class="member-actions"><a href="daeun.html" class="detail-link">DETAIL</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="member-card member-link" role="link" tabindex="0"
+             onclick="location.href='seungjun.html';"
+             onkeydown="if(event.key==='Enter'){location.href='seungjun.html';}">
+          <div class="member-card-content">
+            <img src="../assets/img/member/seungjun.png" alt="Photo of Seungjun Lee" class="member-photo" />
+            <div class="member-text">
+              <div class="member-name">Seungjun Lee / 이승준</div>
+              <div class="member-role">Integrated (M.S./Ph.D) Student</div>
+              <div class="member-detail">Research Field: imaging &amp; signal analysis in biomedical research; innovative approaches in optics</div>
+              <div class="member-actions"><a href="seungjun.html" class="detail-link">DETAIL</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Master
+    ====================================================== -->
+    <section class="member-section" id="master">
+      <h2>Master Students</h2>
+      <p class="section-desc">Empty</p>
+    </section>
+
+    <!-- =====================================================
+         Intern / Undergraduate
+         ✅ FIX: member-list 2개로 나뉘던 것 -> 하나로 합침
+    ====================================================== -->
+    <section class="member-section" id="intern">
+      <h2>Intern / Undergraduate</h2>
+
+      <div class="member-list">
+        <div class="member-card member-link" role="link" tabindex="0"
+             onclick="location.href='hyojung.html';"
+             onkeydown="if(event.key==='Enter'){location.href='hyojung.html';}">
+          <div class="member-card-content">
+            <img src="../assets/img/member/hyojung.png" alt="Photo of Hyojung Lee" class="member-photo" />
+            <div class="member-text">
+              <div class="member-name">Hyojung Lee / 이효정</div>
+              <div class="member-role">Undergraduate Student</div>
+              <div class="member-detail">Research Field: imaging &amp; signal analysis in biomedical research; innovative approaches in optics</div>
+              <div class="member-actions">
+                <a href="hyojung.html" class="detail-link">DETAIL</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="member-card member-link" role="link" tabindex="0"
+             onclick="location.href='soyoung.html';"
+             onkeydown="if(event.key==='Enter'){location.href='soyoung.html';}">
+          <div class="member-card-content">
+            <img src="../assets/img/member/soyoung.png" alt="Photo of Soyoung Ahn" class="member-photo" />
+            <div class="member-text">
+              <div class="member-name">Soyoung Ahn / 안소영</div>
+              <div class="member-role">Undergraduate Student</div>
+              <div class="member-detail">Research Field: Chronic Pain</div>
+              <div class="member-actions">
+                <a href="soyoung.html" class="detail-link">DETAIL</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         Alumni
+    ====================================================== -->
+    <section class="member-section" id="alumni">
+      <h2>Alumni</h2>
+      <p class="section-desc">졸업생 및 전 구성원.</p>
+    </section>
+  </main>
+
+  <!-- [style.css] footer -->
+  <footer>
+    © 2025 GIST Neurophotonics Lab. All rights reserved.
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
