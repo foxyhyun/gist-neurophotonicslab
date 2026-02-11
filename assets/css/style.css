@@ -20,12 +20,6 @@ main{
   padding: 28px 24px;
 }
 
-/* ✅ HOME 페이지만 main 제한 해제 */
-body.home main{
-  max-width: none;
-  padding-left: 0;
-  padding-right: 0;
-}
 
 h1,h2,h3{
   margin-top: 0;
