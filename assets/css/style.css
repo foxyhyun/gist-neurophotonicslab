@@ -60,12 +60,14 @@ footer{
 }
 
 .brand-logo{
-  width: 24px;     /* ✅ 여기 고정이라 로고가 절대 커지지 않음 */
-  height: 24px;
+  width: 24px !important;
+  height: 24px !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
   object-fit: contain;
   display: block;
-  flex: 0 0 auto;
 }
+
 
 .brand-text{
   display: inline-block;
