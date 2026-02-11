@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gallery | GIST Neurophotonics Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/gallery.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">GIST Neurophotonics Lab</div>
+    <nav>
+      <a href="../">Home</a>
+      <a href="../research/">Research</a>
+      <a href="../member/">Member</a>
+      <a href="../publication/">Publication</a>
+      <a href="../gallery/">Gallery</a>
+      <a href="../news/">News</a>
+      <a href="../communication/">Communication</a>
+    </nav>
+  </header>
+
+  <main class="gallery-page">
+
+    <section class="gallery-header">
+      <h1>Lab Gallery</h1>
+      <p>Moments from conferences, workshops, and lab events.</p>
+    </section>
+
+    <!-- Year Filter -->
+    <section class="gallery-filter">
+      <button class="filter-btn active" data-year="all">All</button>
+      <button class="filter-btn" data-year="2026">2026</button>
+      <button class="filter-btn" data-year="2025">2025</button>
+      <button class="filter-btn" data-year="2024">2024</button>
+      <button class="filter-btn" data-year="2023">2023</button>
+    </section>
+
+    <section class="gallery-year">
+      <h2>2026 NPL Workshop - Hoengseong, Gangwondo</h2>
+
+      <div class="gallery-grid">
+        <div class="gallery-item" data-year="2026">
+          <img src="../assets/img/gallery/2026/2026_workshop1.jpg">
+        </div>
+
+        <div class="gallery-item" data-year="2026">
+          <img src="../assets/img/gallery/2026/2026_workshop2.jpg">
+        </div>
+
+        <div class="gallery-item" data-year="2026">
+          <img src="../assets/img/gallery/2026/2026_workshop3.jpg">
+        </div>
+
+        <div class="gallery-item" data-year="2026">
+          <img src="../assets/img/gallery/2026/2026_workshop4.jpg">
+        </div>
+
+        <div class="gallery-item" data-year="2026">
+          <img src="../assets/img/gallery/2026/2026_workshop5.jpg">
+        </div>
+
+        <div class="gallery-item" data-year="2026">
+          <img src="../assets/img/gallery/2026/2026_workshop6.jpg">
+        </div>
+        
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025 GIST Neurophotonics Lab. All rights reserved.
+  </footer>
+
+<script>
+  const buttons = document.querySelectorAll('.filter-btn');
+  const items = document.querySelectorAll('.gallery-item');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const year = btn.dataset.year;
+
+      items.forEach(item => {
+        if (year === 'all' || item.dataset.year === year) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
