@@ -130,11 +130,6 @@
   vertical-align: middle;
 }
 
-/* ---------- Detail Button ----------
-   - "사라짐" 이슈 대부분은 a태그가 display/position 충돌 or 덮임.
-   - 여기서는 확실히 보이게, 그리고 카드 클릭과 충돌 없게.
------------------------------------------------------------ */
-
 .member-actions {
   margin-top: 10px;
 }
@@ -174,3 +169,178 @@
     border-radius: 16px;
   }
 }
+
+/* =========================================================
+   MEMBER DETAIL PAGE (profile) - ADD BELOW (do not delete existing)
+========================================================= */
+
+/* === wrapper === */
+.profile{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 12px;
+}
+
+/* === header row === */
+.profile-header{
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 26px;
+  align-items: center;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+}
+
+/* === photo (keep round) === */
+.profile-photo{
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;  /* ✅ 원형 유지 */
+  object-fit: cover;
+  background: #f1f5f9;
+  border: 1px solid #e5e7eb;
+}
+
+/* === text area === */
+.profile-main{ min-width: 0; }
+
+.profile-name{
+  margin: 0 0 6px;
+  font-size: 34px;
+  letter-spacing: -0.5px;
+  font-weight: 900;
+}
+
+.profile-role{
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #475569;
+}
+
+.profile-affiliation{
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #334155;
+}
+
+.profile-contact{
+  margin: 0;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.profile-contact a{
+  color: #0f172a;
+  text-decoration: underline;
+}
+
+/* === sections === */
+.profile-section{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 22px 20px 6px;
+}
+
+.profile-section h2{
+  font-size: 22px;
+  margin: 22px 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.profile-section h3{
+  font-size: 16px;
+  margin: 16px 0 8px;
+  font-weight: 900;
+}
+
+.profile-section ul{
+  margin: 10px 0 0 18px;
+  color: #334155;
+}
+
+.profile-section li{
+  margin: 6px 0;
+  line-height: 1.7;
+}
+
+.small-text{
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* === personal gallery grid === */
+.personal-gallery{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.personal-gallery img{
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  background: #f1f5f9;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 10px 24px rgba(15,23,42,0.06);
+}
+
+.personal-gallery img:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(15,23,42,0.10);
+}
+
+/* === modal === */
+.gallery-modal{
+  position: fixed;
+  inset: 0;
+  display: none;
+  place-items: center;
+  background: rgba(0,0,0,0.75);
+  z-index: 9999;
+  padding: 24px;
+}
+
+.gallery-modal.open{ display: grid; }
+
+.gallery-modal img{
+  max-width: min(1100px, 96vw);
+  max-height: 88vh;
+  border-radius: 14px;
+  background: #0b1220;
+}
+
+/* === responsive === */
+@media (max-width: 900px){
+  .profile-header{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .profile-photo{
+    margin: 0 auto;
+  }
+  .personal-gallery{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .personal-gallery img{
+    height: 200px;
+  }
+}
+
+@media (max-width: 560px){
+  .personal-gallery{
+    grid-template-columns: 1fr;
+  }
+  .personal-gallery img{
+    height: 220px;
+  }
+}
+
