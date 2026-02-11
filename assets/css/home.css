@@ -2,53 +2,28 @@
    HOME PAGE
 ========================================================= */
 
-body.home {
-  overflow-x: hidden;
-}
-
-/* =========================
-   Intro
-========================= */
-.home-intro {
-  padding: 100px 24px 60px;
-  text-align: center;
-}
-
-.home-intro h1 {
-  font-size: 40px;
-  letter-spacing: -0.6px;
-  margin: 0;
-}
-
-/* =========================
-   FULL WIDTH HERO
-========================= */
 .home-hero {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  padding-bottom: 40px;
+  margin-top: 40px;
 }
 
 /* =========================
-   Photo Slider
+   Slider
 ========================= */
+
 .photo-slider {
   position: relative;
-  max-width: 1400px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 16px;
 }
 
 .slider-viewport {
-  position: relative;
   overflow: hidden;
-  border-radius: 24px;
-  background: #0b1220;
+  border-radius: 28px;
 }
 
 .slider-track {
   display: flex;
-  transition: transform 0.4s ease;
+  transition: transform 0.5s ease;
 }
 
 .slider-image {
@@ -56,64 +31,53 @@ body.home {
   height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-}
-
-
-.slider-caption {
-  position: absolute;
-  left: 18px;
-  bottom: 14px;
-  font-size: 13px;
-  color: #e5e7eb;
-  background: rgba(0,0,0,0.55);
-  padding: 6px 12px;
-  border-radius: 999px;
+  display: none;
 }
 
 /* buttons */
+
 .slider-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
   border: none;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.6);
   color: #fff;
-  font-size: 26px;
+  font-size: 28px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 5;
 }
 
-.slider-btn.prev { left: 10px; }
-.slider-btn.next { right: 10px; }
+.slider-btn.prev { left: 16px; }
+.slider-btn.next { right: 16px; }
 
 .slider-btn:hover {
-  background: rgba(0,0,0,0.75);
+  background: rgba(0,0,0,0.8);
 }
 
 /* dots */
+
 .slider-dots {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 14px;
+  margin-top: 16px;
+  gap: 8px;
 }
 
 .slider-dots .dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
   border: none;
-  background: #cbd5f5;
-  opacity: 0.5;
+  background: #cbd5e1;
   cursor: pointer;
 }
 
 .slider-dots .dot.active {
-  opacity: 1;
-  background: #1e293b;
+  background: #0f172a;
 }
 
 /* =========================
