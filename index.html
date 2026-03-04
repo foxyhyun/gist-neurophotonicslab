@@ -5,9 +5,7 @@
   <title>GIST Neurophotonics Lab</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- 공통 스타일 -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  <!-- 홈 전용 -->
   <link rel="stylesheet" href="assets/css/home.css" />
 </head>
 
@@ -34,54 +32,113 @@
   </nav>
 </header>
 
-
 <!-- =========================
-     INTRO
+     HERO COLLAGE
 ========================= -->
-<section class="home-intro">
-  <h1>Welcome to GIST Neurophotonics Lab</h1>
+<section class="home-hero-mosaic">
+  <div class="hero-grid">
+    <figure class="hero-item hero-item-large">
+      <img src="assets/img/main/main1.png" alt="NPL group photo" />
+    </figure>
+
+    <figure class="hero-item">
+      <img src="assets/img/main/main2.png" alt="Optical setup in the laboratory" />
+    </figure>
+
+    <figure class="hero-item">
+      <img src="assets/img/main/main3.png" alt="Representative neurophotonics image" />
+    </figure>
+  </div>
+
+  <div class="hero-content">
+    <span class="hero-kicker">GIST Neurophotonics Lab</span>
+    <h1>Welcome to NPL</h1>
+    <p>
+      Advancing neurophotonics through biomedical imaging,
+      computational analysis, and translational neuroscience.
+    </p>
+
+    <div class="hero-actions">
+      <a href="./research/" class="hero-btn hero-btn-primary">Explore Research</a>
+      <a href="./contact/" class="hero-btn hero-btn-secondary">Join Our Lab</a>
+    </div>
+  </div>
 </section>
 
 <!-- =========================
-     FULL WIDTH PHOTO SLIDER
-     (main 밖 → width 제한 안 받음)
+     RECRUITMENT BANNER
 ========================= -->
-<section class="home-hero">
-  <div class="photo-slider">
-    <button class="slider-btn prev">‹</button>
-
-    <div class="slider-viewport">
-      <div class="slider-track">
-
-        <img
-          src="assets/img/main/main1.png"
-          alt="2025 - Cherry Blossom day"
-          class="slider-image"
-        />
-
-        <img
-          src="assets/img/gallery/2026/2026_workshop6.png"
-          alt="2026 - NPL Workshop"
-          class="slider-image"
-        />
-
-      </div>
+<section class="home-recruit-banner">
+  <div class="recruit-card">
+    <div class="recruit-copy">
+      <span class="recruit-kicker">Now Recruiting</span>
+      <h2>We are looking for M.S./Ph.D. students and research interns.</h2>
+      <p>
+        Students interested in neurophotonics, neuroscience, biomedical imaging,
+        machine learning, and signal analysis are warmly encouraged to contact us.
+      </p>
     </div>
 
-    <button class="slider-btn next">›</button>
-  </div>
-
-  <div class="slider-dots">
-    <button class="dot active"></button>
-    <button class="dot"></button>
+    <div class="recruit-actions">
+      <a href="./contact/" class="home-link-btn home-link-btn-dark">Contact</a>
+      <a href="./member/" class="home-link-btn">Meet the Team</a>
+    </div>
   </div>
 </section>
 
-
 <!-- =========================
-     MAIN (width 제한 영역)
+     MAIN
 ========================= -->
-<main class="home-page">  
+<main class="home-page">
+
+  <!-- Lab Highlights -->
+  <section class="home-section">
+    <div class="section-head-row">
+      <div>
+        <h2>Lab Highlights</h2>
+        <p class="section-sub">
+          A quick look at our people, instruments, and recent activities.
+        </p>
+      </div>
+      <a href="./gallery/" class="home-link-btn">View gallery</a>
+    </div>
+
+    <div class="home-showcase-card">
+      <div class="photo-slider">
+        <button class="slider-btn prev" aria-label="Previous slide">‹</button>
+
+        <div class="slider-viewport">
+          <div class="slider-track">
+            <img
+              src="assets/img/main/main1.png"
+              alt="NPL group photo"
+              class="slider-image"
+            />
+
+            <img
+              src="assets/img/gallery/2026/2026_workshop6.png"
+              alt="NPL workshop"
+              class="slider-image"
+            />
+
+            <img
+              src="assets/img/main/main2.png"
+              alt="Optical setup in the lab"
+              class="slider-image"
+            />
+          </div>
+        </div>
+
+        <button class="slider-btn next" aria-label="Next slide">›</button>
+      </div>
+
+      <div class="slider-dots">
+        <button class="dot active" aria-label="Go to slide 1"></button>
+        <button class="dot" aria-label="Go to slide 2"></button>
+        <button class="dot" aria-label="Go to slide 3"></button>
+      </div>
+    </div>
+  </section>
 
   <!-- Latest News -->
   <section class="home-section">
@@ -90,7 +147,7 @@
         <h2>Latest Lab News</h2>
         <p class="section-sub">Recent updates, awards, and events.</p>
       </div>
-      <a href="./news/" class="btn">View all</a>
+      <a href="./news/" class="home-link-btn">View all</a>
     </div>
 
     <div class="news-grid">
